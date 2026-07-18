@@ -1,0 +1,172 @@
+/* styles.css */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f0e6;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+}
+
+.container {
+  width: 100%;
+  max-width: 600px;
+  padding: 2rem 1rem;
+}
+
+.logo {
+  display: block;
+  margin: 0 auto 1rem;
+  width: 100%;
+  border-radius: 8px;
+}
+
+.header-box {
+  background-color: white;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  margin-bottom: 1.5rem;
+}
+
+.header-box h2 {
+  margin: 0;
+  color: #124733;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.heady {
+  margin: 0.5rem auto;
+  max-width: 600px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.heady-strip {
+  height: 8px;
+  background-color: #e64f29;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.heady-content {
+  background-color: white;
+  padding: 0.75rem 1.7rem;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.heady-content h2 {
+  margin: 0;
+  color: #124733;
+  font-size: 1.4rem;
+  letter-spacing: 0.03em;
+}
+
+.inputer {
+  background-color: white;
+  padding: 2rem 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+label {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-weight: bold;
+  color: #124733;
+  padding: 0rem 0.3rem;
+}
+
+input[type="text"],
+input[type="email"] {
+  width: 75%; /* About half the width */
+}
+
+/* On screens smaller than 600px (mobile), make inputs full width */
+@media (max-width: 600px) {
+  input[type="text"],
+  input[type="email"] {
+    width: 100%;
+  }
+}
+
+input[type="text"],
+input[type="email"] {
+  padding: 0.6rem 0.3rem;
+  border: none;
+  border-bottom: 2px solid #cccccc;
+  border-radius: 0;
+  font-size: 1rem;
+  box-sizing: border-box;
+  background-color: transparent;
+  outline: none;
+  transition: border-color 0.3s;
+  text-align: left; /* Ensures text starts on the left */
+  margin-left: 0; /* Keeps it aligned to the left */
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus {
+  border-bottom: 2px solid #e64f29;
+}
+
+input::placeholder {
+  color: #888888;     /* Light gray text */
+  opacity: 1;         /* Ensures full visibility */
+  font-size: 0.7rem; /* Adjust size if needed */
+}
+
+.form-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+
+.form-actions button {
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.form-actions button[type="submit"] {
+  background-color: #e64f29;
+  color: white;
+  font-weight: bold;
+}
+
+.form-actions button[type="submit"]:disabled {
+  background-color: #cccccc;
+  color: #666666;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.form-actions button[type="submit"]:hover {
+  background-color: #c4cd2b;
+  color: #124733;
+}
+
+.clear-btn {
+  background: none;
+  color: #124733;
+  font-weight: 500;
+  padding: 0.6rem 1.2rem;
+}
+
+.clear-btn:hover {
+  color: #e64f29;
+}
+
+.required {
+  color: #e64f29;
+}
