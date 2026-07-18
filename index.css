@@ -85,20 +85,26 @@ label {
 }
 
 input[type="text"],
-input[type="email"] {
+input[type="email"],
+input[type="date"],
+select {
   width: 75%; /* About half the width */
 }
 
 /* On screens smaller than 600px (mobile), make inputs full width */
 @media (max-width: 600px) {
   input[type="text"],
-  input[type="email"] {
+  input[type="email"],
+  input[type="date"],
+  select {
     width: 100%;
   }
 }
 
 input[type="text"],
-input[type="email"] {
+input[type="email"],
+input[type="date"],
+select {
   padding: 0.6rem 0.3rem;
   border: none;
   border-bottom: 2px solid #cccccc;
@@ -110,10 +116,28 @@ input[type="email"] {
   transition: border-color 0.3s;
   text-align: left; /* Ensures text starts on the left */
   margin-left: 0; /* Keeps it aligned to the left */
+  font-family: Arial, sans-serif;
+  color: #333333;
+}
+
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%23124733' stroke-width='3'><polyline points='6 9 12 15 18 9'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 0.3rem center;
+  padding-right: 1.5rem;
+}
+
+select:invalid {
+  color: #888888;
 }
 
 input[type="text"]:focus,
-input[type="email"]:focus {
+input[type="email"]:focus,
+input[type="date"]:focus,
+select:focus {
   border-bottom: 2px solid #e64f29;
 }
 
